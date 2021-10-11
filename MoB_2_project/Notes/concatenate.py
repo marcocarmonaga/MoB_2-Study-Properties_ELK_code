@@ -13,6 +13,4 @@ for dir, path in list:
     os.chdir(path)
     f = open('./TOTENERGY.OUT','r')
     lines = f.readlines()
-    with open(f'../E_c_a_{dir}.txt', 'a') as file:
-        file.writelines(print(dir, lines[-1]))
-        file.close()
+    print(dir, lines[-1])

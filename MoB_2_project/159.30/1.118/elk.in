@@ -62,7 +62,7 @@ scale
 
 ! aqui poner el path de donde tienes la carpeta species
 sppath
-  '/home/marcocarmonag/Documents/elk-7.2.42/species/'
+  '/home/marco/Downloads/elk-7.2.42/species/'
 
 atoms
   2                                    : nspecies
