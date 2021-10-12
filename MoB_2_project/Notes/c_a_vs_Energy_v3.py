@@ -26,4 +26,3 @@ for poly_coefficient, file in zip(poly_coefficients, files):
     plt.ylabel('Energy')
     plt.legend()
     fig.savefig(f'/home/marco/Documents/Elk_projects/MoB_2_project/c_a_vs_Energy/plots/{file}.png')
-    
