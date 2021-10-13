@@ -1,0 +1,15 @@
+ 
+MoB2
+ 
+Birch-Murnaghan 3rd-order EOS
+Birch F, Phys. Rev. 71, p809 (1947)
+ 
+(Default units are atomic: Hartree, Bohr etc.) 
+ 
+ V0                =            178.3437592    
+ E0                =           -4099.369449    
+ B0                =           0.1024416633E-01
+ B0'               =            4.190756356    
+ 
+ B0 (GPa)          =            301.3937283    
+ 
