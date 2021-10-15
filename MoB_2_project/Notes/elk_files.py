@@ -8,7 +8,7 @@ import webbrowser
 c_a_values = [0.986, 1.008, 1.030, 1.052, 1.074, 1.096, 1.118, 1.140, 1.162, 1.183, 1.206]
 
 # Volume (change it)
-V = 194.7
+V = 178.3437592
 
 a_values = [((2 * V) / (m.sqrt(3) * c_a_value))**(1/3) for c_a_value in c_a_values]
 a_values = [round(a_value, 5) for a_value in a_values]
@@ -80,7 +80,7 @@ l41 = "scale"
 ls42 = [f'  {a_value}' for a_value in a_values]
 
 l43 = "sppath"
-l44 = "  '/home/marcocarmonag/Documents/elk-7.2.42/species/'"
+l44 = "  '/home/marco/Downloads/elk-7.2.42/species/'"
 
 l45 = "atoms"
 l46 = "  2                                    : nspecies"

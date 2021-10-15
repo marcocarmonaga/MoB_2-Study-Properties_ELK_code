@@ -1,0 +1,69 @@
+!MoB2_hex_gga_nk18_rkmax7.0_gmax12.0_w0.20
+ 
+tasks
+  0
+ 
+! lattice vector optimisation while maintaining the unit cell volume
+!latvopt
+!  2
+ 
+! high-quality calculation for precise total energies
+highq
+ .true.
+ 
+! switch off automatic determination of the k-point grid
+autokpt
+ .false.
+ 
+ngridk
+  18 18 18
+ 
+! shift of k-point offset
+vkloff
+  0.0  0.0  0.5
+ 
+! type of smearing 0-->Gaussian 3--> Fermi-Dirac(default)
+!stype
+!  0
+ 
+! value of the smearing (Ry)
+!swidth
+!  0.20
+ 
+! default value is 7.0
+!rgkmax
+!  7.0
+ 
+! default value is 12.0
+!gmaxvr
+!  12.0
+ 
+! PBE exchange-correlation functional
+xctype
+  20
+ 
+! speed the calculation up with Broyden mixing
+mixtype
+  3
+ 
+! lattice vectors of the crystal
+avec
+  .8660254037844386 -0.5  0.0  
+  0.0    1.0  0.0 
+  0.0    0.0  1.162
+ 
+scale
+  5.61703
+ 
+sppath
+  '/home/marco/Downloads/elk-7.2.42/species/'
+ 
+atoms
+  2                                    : nspecies
+  'Mo.in'                              : spfname
+  1                                    : natoms; atposl below
+  0.0         0.0         0.0
+  'B_RMTfix.in'
+  2
+  .6666666666666666  .3333333333333333  0.5
+  .3333333333333333  .6666666666666666  0.5
