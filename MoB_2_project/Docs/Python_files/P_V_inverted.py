@@ -1,17 +1,24 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 V0 = 178.3437592
-B0 = 0.1024416633e-01
-B0_prime = 4.190756356
 c0_a0 = 1.0958578897109787
-
-def P(V):
-    return (3 * B0 / 2) * ((V0 / V)**(7 / 3)-(V0 / V)**(5 / 3))*(1+(3 / 4)*(B0_prime - 4)*((V0 / V)**(2 / 3) - 1))
-
-def beta(c_a,V,alpha):
-    return ((((c_a)-(c0_a0))/(1-(V / V0)))-alpha)/(1-(V / V0))
 
 df = np.loadtxt('/home/marco/Documents/Elk_projects/MoB_2_project/c_a_vs_Energy/fits/v_vs_c_a_vs_energy.txt')
 
-print(df)
+V = df[:,0]
+
+C_A_C0_A0 = [c_a - c0_a0 for c_a in df[:,1]]
+
+linear_coeffs = [1 - (v / V0) for v in V]
+quadratic_coeffs =  [(1 - (v / V0))**2 for v in V]
+
+A = [[linear_coeff, quadratic_coeff] for linear_coeff, quadratic_coeff in zip(linear_coeffs, quadratic_coeffs)]
+A = np.array(A)
+
+Q, R = np.linalg.qr(A)
+
+b = np.vstack(C_A_C0_A0)
+
+alpha, beta = np.linalg.solve(np.linalg.inv(R), Q.T.dot(b))
+
+print(alpha, beta)
