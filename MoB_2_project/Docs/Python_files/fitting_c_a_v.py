@@ -3,7 +3,7 @@ import numpy as np
 V0 = 178.3437592
 c0_a0 = 1.0958578897109787
 
-df = np.loadtxt('/home/marco/Documents/Elk_projects/MoB_2_project/c_a_vs_Energy/fits/v_vs_c_a_vs_energy.txt')
+df = np.loadtxt('/home/marcocarmonaga/Documents/Elk_projects/MoB_2_project/c_a_vs_Energy/fits/v_vs_c_a_vs_energy.txt')
 
 V = df[:,0]
 
