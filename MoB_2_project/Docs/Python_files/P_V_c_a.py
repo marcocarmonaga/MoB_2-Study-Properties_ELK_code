@@ -39,23 +39,28 @@ def GPa(Ha_Bohr_3: complex) -> complex:
 def GETTING_VOLUMES():
     for pressure in PRESSURES:
         V = Symbol('V')
-        volumes : List(complex) = solve(P(V) - pressure, 'V')
+        volumes: List(complex) = solve(P(V) - pressure, 'V')
         VOLUMES.append(volumes[0])
+
 
 def GETTING_C_A_VALUES():
     for volume in VOLUMES:
         c_a = C_A(volume)
         C_A_VALUES.append(c_a)
-        
+
+
 def SAVING():
-    file = open('/home/marcocarmonaga/Documents/Elk_projects/MoB_2_project/c_a_vs_Energy/fits/P_V_c_a.txt', 'w')
-    for pressure, volume, c_a_value in zip(PRESSURES,VOLUMES,C_A_VALUES):
+    file = open(
+        '/home/marcocarmonaga/Documents/Elk_projects/MoB_2_project/c_a_vs_Energy/fits/P_V_c_a.txt', 'w')
+    for pressure, volume, c_a_value in zip(PRESSURES, VOLUMES, C_A_VALUES):
         file.write(f'{pressure} {volume} {c_a_value}\n')
     file.close()
-    
+
+
 def POWEROFF():
     os.system('shutdown now')
 # Definiendo funcion principal
+
 
 def main():
     GETTING_VOLUMES()
