@@ -8,7 +8,7 @@ data = np.loadtxt(
     '/home/marcocarmonaga/Documents/Elk_projects/MoB_2_project/c_a_vs_Energy/fits/P_V_c_a_copy.txt')
 
 # CONSTANTES
-spec = '/home/marcocarmonaga/elk-7.2.42/species/'
+spec = '/home/marcocarmonaga/Elk/elk-7.2.42/species/'
 k = 18
 rkm = 8
 gm = 16
